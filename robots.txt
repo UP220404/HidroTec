@@ -1,0 +1,16 @@
+# robots.txt para HidroTec
+# Permitir acceso a todos los bots de búsqueda
+
+User-agent: *
+Allow: /
+
+# Recursos específicos
+Allow: /index.html
+Allow: /styles.css
+Allow: /app.js
+
+# Opcional: cuando tengas sitemap
+# Sitemap: https://www.hidrotec.com/sitemap.xml
+
+# Crawl-delay para bots educados
+Crawl-delay: 1

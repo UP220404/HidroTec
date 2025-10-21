@@ -1,0 +1,20 @@
+{
+  "name": "HidroTec - Mantenimiento de Computadoras",
+  "short_name": "HidroTec",
+  "description": "Servicio profesional de mantenimiento preventivo y correctivo de computadoras en Aguascalientes. Soporte 24/7, planes desde $200 MXN/mes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066cc",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "es-MX"
+}

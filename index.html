@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HidroTec - Mantenimiento preventivo y correctivo de computadoras en Aguascalientes. Soporte 24/7, planes desde $200 MXN/mes. ¡20% de descuento en apertura!">
+    <meta name="keywords" content="mantenimiento computadoras, reparación PC, soporte técnico, Aguascalientes, HidroTec">
+    <meta name="author" content="HidroTec">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HidroTec - Mantenimiento de Computadoras en Aguascalientes">
+    <meta property="og:description" content="Servicio profesional de mantenimiento preventivo y correctivo. Planes desde $200/mes. ¡Promoción de apertura!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+
+    <title>HidroTec - Mantenimiento Profesional de Computadoras | Aguascalientes</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GridStack CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack@9.5.1/dist/gridstack.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content (accesibilidad) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#hero">
+                <span class="brand-icon">💻</span> HidroTec
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#encuesta">Encuesta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#panel">Panel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <button id="darkModeToggle" class="btn btn-sm btn-outline-light ms-2"
+                                aria-label="Cambiar modo oscuro" data-action="toggle-dark-mode">
+                            <span class="dark-mode-icon">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" role="banner">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-8 mx-auto text-center hero-content">
+                        <h1 class="display-3 fw-bold mb-4 hero-title">
+                            Mantenimiento Inteligente para tu Computadora
+                        </h1>
+                        <p class="lead mb-4 hero-subtitle">
+                            Diagnóstico avanzado, soporte 24/7 y planes flexibles desde <strong>$200 MXN/mes</strong>
+                        </p>
+                        <div class="alert alert-success d-inline-block promo-badge mb-4" role="alert">
+                            <strong>🎉 ¡Promoción de Apertura!</strong><br>
+                            20% de descuento en tu primer servicio + Primer mes del plan Básico a $199 MXN
+                            <br><small class="text-muted">Válido por 30 días</small>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#contacto" class="btn btn-primary btn-lg me-3 cta-button" data-action="cta-agendar">
+                                Agenda Hoy Mismo
+                            </a>
+                            <a href="#planes" class="btn btn-outline-light btn-lg">
+                                Ver Planes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decoration"></div>
+        </section>
+
+        <!-- Anuncio de Apertura (componente exportable) -->
+        <section id="anuncio" class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div id="anuncioCard" class="card shadow-lg border-0 anuncio-card">
+                            <div class="card-body p-5">
+                                <div class="text-center mb-4">
+                                    <h2 class="display-5 fw-bold text-primary mb-2">
+                                        <span class="brand-icon">💻</span> HidroTec
+                                    </h2>
+                                    <p class="text-muted mb-0">Mantenimiento Profesional de Computadoras</p>
+                                </div>
+
+                                <div class="alert alert-success text-center mb-4">
+                                    <h3 class="h4 mb-3">🎊 ¡Gran Apertura!</h3>
+                                    <p class="mb-2"><strong>20% de descuento</strong> en tu primer servicio</p>
+                                    <p class="mb-0"><strong>Primer mes del plan Básico a solo $199 MXN</strong></p>
+                                    <small class="text-muted d-block mt-2">Válido por 30 días desde la apertura</small>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h4 class="h5 mb-3 fw-bold">✨ Beneficios clave:</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">· Diagnóstico inteligente con software propio</li>
+                                        <li class="mb-2">· Soporte remoto 24/7 incluido</li>
+                                        <li class="mb-2">· Visitas programadas a domicilio</li>
+                                        <li class="mb-2">· Historial digital de tu equipo</li>
+                                        <li class="mb-2">· Equipo de reemplazo temporal cuando aplique</li>
+                                    </ul>
+                                </div>
+
+                                <div class="text-center mb-4">
+                                    <p class="mb-2"><strong>📍 Ubicación:</strong> Aguascalientes, Ags. (Zonas UPA/UAA)</p>
+                                    <p class="mb-2"><strong>📧 Email:</strong> contacto@hidrotec.com</p>
+                                    <p class="mb-2"><strong>📱 WhatsApp:</strong> +52 449 123 4567</p>
+                                    <p class="mb-0"><strong>🌐 Web:</strong> www.hidrotec.com</p>
+                                </div>
+
+                                <div class="text-center">
+                                    <a href="#contacto" class="btn btn-primary btn-lg w-100">
+                                        📅 Agenda tu Servicio Hoy
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button id="downloadAnuncioBtn" class="btn btn-success" data-action="download-anuncio">
+                                📥 Descargar Anuncio como Imagen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros Section -->
+        <section id="nosotros" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Nuestra Empresa</h2>
+                        <p class="lead text-muted">
+                            Somos HidroTec, tu aliado tecnológico en Aguascalientes
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm info-card">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box mb-3">🎯</div>
+                                <h3 class="h5 fw-bold mb-3">Misión</h3>
+                                <p class="text-muted">
+                                    Proporcionar servicios de mantenimiento preventivo y correctivo de calidad superior,
+                                    garantizando el óptimo rendimiento de los equipos de cómputo de nuestros clientes mediante
+                                    tecnología innovadora y atención personalizada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm info-card">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box mb-3">🚀</div>
+                                <h3 class="h5 fw-bold mb-3">Visión</h3>
+                                <p class="text-muted">
+                                    Ser la empresa líder en mantenimiento de computadoras en Aguascalientes, reconocida por
+                                    nuestro servicio excepcional, innovación tecnológica y compromiso con la satisfacción del cliente,
+                                    expandiéndonos regionalmente en los próximos años.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm info-card">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box mb-3">⭐</div>
+                                <h3 class="h5 fw-bold mb-3">Valores</h3>
+                                <ul class="list-unstyled text-muted text-start">
+                                    <li class="mb-2">• <strong>Excelencia</strong> en cada servicio</li>
+                                    <li class="mb-2">• <strong>Honestidad</strong> y transparencia</li>
+                                    <li class="mb-2">• <strong>Innovación</strong> constante</li>
+                                    <li class="mb-2">• <strong>Compromiso</strong> con el cliente</li>
+                                    <li class="mb-2">• <strong>Profesionalismo</strong> técnico</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm info-card">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box mb-3">📖</div>
+                                <h3 class="h5 fw-bold mb-3">Nuestra Historia</h3>
+                                <p class="text-muted">
+                                    Fundada en 2025, HidroTec nace de la necesidad de ofrecer un servicio de mantenimiento
+                                    especializado y cercano para la comunidad universitaria y profesional de Aguascalientes,
+                                    combinando experiencia técnica con atención personalizada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="servicios" class="py-5 bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Nuestros Servicios</h2>
+                        <p class="lead text-muted">
+                            Soluciones completas para mantener tu equipo en perfecto estado
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow service-card">
+                            <div class="card-body p-4">
+                                <div class="service-icon mb-3">🔧</div>
+                                <h3 class="h5 fw-bold mb-3">Mantenimiento Preventivo</h3>
+                                <p class="text-muted">
+                                    Limpieza física, actualización de software, optimización de rendimiento,
+                                    verificación de hardware y calibración del sistema para prevenir fallas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow service-card">
+                            <div class="card-body p-4">
+                                <div class="service-icon mb-3">🛠️</div>
+                                <h3 class="h5 fw-bold mb-3">Mantenimiento Correctivo</h3>
+                                <p class="text-muted">
+                                    Reparación de componentes, resolución de errores de sistema,
+                                    eliminación de virus y malware, recuperación tras fallas críticas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow service-card">
+                            <div class="card-body p-4">
+                                <div class="service-icon mb-3">💾</div>
+                                <h3 class="h5 fw-bold mb-3">Respaldos y Recuperación</h3>
+                                <p class="text-muted">
+                                    Configuración de sistemas de respaldo automático, recuperación de datos perdidos,
+                                    migración de información entre equipos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow service-card">
+                            <div class="card-body p-4">
+                                <div class="service-icon mb-3">⚡</div>
+                                <h3 class="h5 fw-bold mb-3">Optimización de Rendimiento</h3>
+                                <p class="text-muted">
+                                    Análisis y mejora del desempeño del sistema, eliminación de archivos innecesarios,
+                                    configuración óptima de recursos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow service-card">
+                            <div class="card-body p-4">
+                                <div class="service-icon mb-3">🖥️</div>
+                                <h3 class="h5 fw-bold mb-3">Instalación y Actualización</h3>
+                                <p class="text-muted">
+                                    Instalación de software especializado, actualización de componentes hardware,
+                                    configuración de sistemas operativos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow service-card">
+                            <div class="card-body p-4">
+                                <div class="service-icon mb-3">🌐</div>
+                                <h3 class="h5 fw-bold mb-3">Soporte General</h3>
+                                <p class="text-muted">
+                                    Asistencia técnica remota 24/7, asesoría personalizada,
+                                    resolución de problemas cotidianos y configuraciones especiales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios Section -->
+        <section id="beneficios" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">¿Por Qué Elegirnos?</h2>
+                        <p class="lead text-muted">
+                            Nuestro diferencial tecnológico y de servicio
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="benefit-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3">🧠</div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2">Diagnóstico Inteligente</h3>
+                                    <p class="text-muted mb-0">
+                                        Software propio de monitoreo que analiza el estado de tu equipo en tiempo real,
+                                        detecta problemas antes de que ocurran y genera reportes detallados.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3">📊</div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2">Historial Digital</h3>
+                                    <p class="text-muted mb-0">
+                                        Cada equipo cuenta con un expediente digital completo: servicios realizados,
+                                        componentes reemplazados, diagnósticos previos y recomendaciones personalizadas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3">🕐</div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2">Soporte 24/7 Remoto</h3>
+                                    <p class="text-muted mb-0">
+                                        Asistencia técnica remota disponible a cualquier hora del día, todos los días del año.
+                                        Resolvemos problemas urgentes sin que salgas de casa.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="benefit-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3">📅</div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2">Visitas Programadas</h3>
+                                    <p class="text-muted mb-0">
+                                        Mantenimiento preventivo programado según tus necesidades. Nos adaptamos a tu horario
+                                        y ubicación en las zonas UPA/UAA de Aguascalientes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3">💻</div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2">Equipo de Reemplazo Temporal</h3>
+                                    <p class="text-muted mb-0">
+                                        Si tu computadora requiere reparación extensa, te proporcionamos un equipo temporal
+                                        para que no pierdas productividad (según disponibilidad y plan contratado).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3">🎯</div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2">Servicio Personalizado</h3>
+                                    <p class="text-muted mb-0">
+                                        Atención directa con técnicos especializados. Entendemos las necesidades específicas
+                                        de estudiantes, profesionales independientes y PyMEs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes Section -->
+        <section id="planes" class="py-5 bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Planes y Precios</h2>
+                        <p class="lead text-muted">
+                            Opciones flexibles adaptadas a tus necesidades
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="planesContainer">
+                    <!-- Los planes se generarán dinámicamente desde app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios Section -->
+        <section id="testimonios" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Lo Que Dicen Nuestros Clientes</h2>
+                        <p class="lead text-muted">
+                            Testimonios de quienes confían en HidroTec
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow testimonial-card">
+                            <div class="card-body p-4">
+                                <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text mb-3">
+                                    "El servicio de diagnóstico inteligente detectó un problema en mi disco duro antes de que
+                                    perdiera información importante. ¡Salvaron mi tesis!"
+                                </p>
+                                <div class="testimonial-author">
+                                    <strong>Ana Martínez</strong>
+                                    <div class="text-muted small">Estudiante de Ingeniería - UAA</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow testimonial-card">
+                            <div class="card-body p-4">
+                                <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text mb-3">
+                                    "Como diseñador freelance, necesito que mi equipo funcione perfecto. El plan Básico me ha
+                                    ahorrado tiempo y dinero. Excelente relación calidad-precio."
+                                </p>
+                                <div class="testimonial-author">
+                                    <strong>Carlos Hernández</strong>
+                                    <div class="text-muted small">Diseñador Gráfico Independiente</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow testimonial-card">
+                            <div class="card-body p-4">
+                                <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text mb-3">
+                                    "El plan para Negocios ha sido fundamental para nuestra empresa. Las visitas programadas
+                                    y el soporte prioritario mantienen nuestras 8 computadoras siempre funcionando."
+                                </p>
+                                <div class="testimonial-author">
+                                    <strong>Patricia Sánchez</strong>
+                                    <div class="text-muted small">Gerente - Contaduría y Asociados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-5 bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Preguntas Frecuentes</h2>
+                        <p class="lead text-muted">
+                            Resuelve tus dudas más comunes
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        ¿Qué incluye el mantenimiento preventivo?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        El mantenimiento preventivo incluye limpieza física interna y externa, actualización de software y drivers,
+                                        optimización del sistema operativo, verificación de hardware, eliminación de archivos temporales,
+                                        análisis antivirus completo y generación de reporte de estado del equipo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        ¿Cómo funciona el soporte remoto 24/7?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Puedes contactarnos por WhatsApp, email o teléfono a cualquier hora. Nuestros técnicos se conectarán
+                                        remotamente a tu equipo (con tu autorización) usando software seguro para diagnosticar y resolver problemas
+                                        de software, configuración o rendimiento sin necesidad de visita física.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        ¿Puedo cancelar mi plan de suscripción?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Sí, nuestros planes son sin ataduras. Puedes cancelar en cualquier momento con un aviso de 7 días de anticipación.
+                                        No hay penalizaciones ni costos ocultos. Solo pagas por el tiempo que uses el servicio.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        ¿Ofrecen garantía en las reparaciones?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Todas nuestras reparaciones incluyen garantía de 30 días en mano de obra. Los componentes nuevos instalados
+                                        tienen la garantía del fabricante. Si el problema persiste dentro del período de garantía,
+                                        lo solucionamos sin costo adicional.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                        ¿Cuál es el área de cobertura?
+                                    </button>
+                                </h3>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Actualmente damos servicio en Aguascalientes, con enfoque en las zonas UPA (Universidad Politécnica) y UAA
+                                        (Universidad Autónoma de Aguascalientes). Estamos planeando expandirnos a otras zonas de la ciudad y
+                                        municipios cercanos próximamente.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                        ¿Qué diferencia hay entre el plan Básico y el de Negocios?
+                                    </button>
+                                </h3>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        El plan Básico está diseñado para usuarios individuales e incluye mantenimiento preventivo y soporte remoto básico.
+                                        El plan Negocios/SME está orientado a empresas y profesionales que requieren visitas programadas, respuesta prioritaria,
+                                        respaldos automáticos programados, gestión de múltiples equipos y SLA garantizado.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Encuesta Section -->
+        <section id="encuesta" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Encuesta de Mercado</h2>
+                        <p class="lead text-muted">
+                            Ayúdanos a conocerte mejor. Tus respuestas nos permitirán mejorar nuestro servicio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card border-0 shadow-lg">
+                            <div class="card-body p-4 p-md-5">
+                                <form id="surveyForm" novalidate>
+                                    <!-- Las preguntas se generarán dinámicamente desde app.js -->
+                                    <div id="surveyQuestions"></div>
+
+                                    <div class="text-center mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg" data-action="submit-survey">
+                                            Enviar Respuestas
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <div id="surveySuccess" class="alert alert-success mt-4 d-none" role="alert">
+                                    <h4 class="alert-heading">¡Gracias por tu participación! 🎉</h4>
+                                    <p class="mb-0">Tus respuestas han sido registradas exitosamente.</p>
+                                </div>
+
+                                <div class="mt-4 text-center">
+                                    <button id="shareEncuestaBtn" class="btn btn-outline-secondary me-2" data-action="share-encuesta">
+                                        📋 Copiar Link de Encuesta
+                                    </button>
+                                    <button id="exportResultsBtn" class="btn btn-success" data-action="export-results">
+                                        📊 Exportar Resultados (CSV)
+                                    </button>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="card bg-light border-0">
+                                        <div class="card-body">
+                                            <h5 class="card-title">💡 Comparte esta encuesta</h5>
+                                            <p class="card-text small">
+                                                <strong>Por WhatsApp:</strong> Copia el link y compártelo en tus grupos.<br>
+                                                <strong>Por Email:</strong> Envía el link a tus contactos con el asunto "Encuesta HidroTec - Tu opinión importa"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resultados de la encuesta -->
+                        <div class="card border-0 shadow-lg mt-4">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="h4 fw-bold mb-4">Resultados Actuales</h3>
+                                <p class="text-muted mb-4">
+                                    Total de respuestas: <strong id="totalResponses">0</strong>
+                                </p>
+
+                                <div id="chartsContainer" class="row g-4">
+                                    <!-- Las gráficas se generarán dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel Section (GridStack) -->
+        <section id="panel" class="py-5 bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Panel de Métricas</h2>
+                        <p class="lead text-muted">
+                            Análisis en tiempo real de las respuestas de la encuesta (arrastra para reordenar)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="grid-stack" id="metricsPanel">
+                            <!-- Los widgets se generarán dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto text-center section-header">
+                        <h2 class="display-4 fw-bold mb-3">Contáctanos</h2>
+                        <p class="lead text-muted">
+                            Estamos listos para atenderte
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-lg h-100">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="h4 fw-bold mb-4">Envíanos un Mensaje</h3>
+                                <form id="contactForm" novalidate>
+                                    <div class="mb-3">
+                                        <label for="contactName" class="form-label">Nombre completo <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="contactName" name="name" required
+                                               aria-required="true" aria-describedby="nameHelp">
+                                        <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="contactEmail" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="contactEmail" name="email" required
+                                               aria-required="true" aria-describedby="emailHelp">
+                                        <div class="invalid-feedback">Por favor ingresa un email válido.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="contactPhone" class="form-label">Teléfono <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="contactPhone" name="phone" required
+                                               aria-required="true" pattern="[0-9]{10}" aria-describedby="phoneHelp">
+                                        <div class="invalid-feedback">Por favor ingresa un teléfono válido (10 dígitos).</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="contactSubject" class="form-label">Asunto <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="contactSubject" name="subject" required aria-required="true">
+                                            <option value="" selected disabled>Selecciona un asunto</option>
+                                            <option value="plan">Consulta sobre planes</option>
+                                            <option value="servicio">Solicitar servicio</option>
+                                            <option value="soporte">Soporte técnico</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                        <div class="invalid-feedback">Por favor selecciona un asunto.</div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="contactMessage" class="form-label">Mensaje <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="contactMessage" name="message" rows="4" required
+                                                  aria-required="true" aria-describedby="messageHelp"></textarea>
+                                        <div class="invalid-feedback">Por favor ingresa tu mensaje.</div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary btn-lg w-100" data-action="submit-contact">
+                                        Enviar Mensaje
+                                    </button>
+                                </form>
+
+                                <div id="contactSuccess" class="alert alert-success mt-4 d-none" role="alert">
+                                    <h5 class="alert-heading">¡Mensaje enviado!</h5>
+                                    <p class="mb-0">Gracias por contactarnos. Te responderemos a la brevedad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-lg h-100">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="h4 fw-bold mb-4">Información de Contacto</h3>
+
+                                <div class="contact-info mb-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="contact-icon me-3">📍</div>
+                                        <div>
+                                            <strong>Ubicación</strong>
+                                            <p class="text-muted mb-0">Aguascalientes, Ags.<br>Zonas UPA/UAA</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="contact-icon me-3">📧</div>
+                                        <div>
+                                            <strong>Email</strong>
+                                            <p class="text-muted mb-0">
+                                                <a href="mailto:contacto@hidrotec.com">contacto@hidrotec.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="contact-icon me-3">📱</div>
+                                        <div>
+                                            <strong>WhatsApp</strong>
+                                            <p class="text-muted mb-0">
+                                                <a href="https://wa.me/524491234567">+52 449 123 4567</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="contact-icon me-3">🕐</div>
+                                        <div>
+                                            <strong>Horario de Atención</strong>
+                                            <p class="text-muted mb-0">
+                                                Soporte remoto: 24/7<br>
+                                                Visitas: Lun-Vie 9:00-19:00, Sáb 10:00-14:00
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h4 class="h6 fw-bold mb-3">Redes Sociales</h4>
+                                    <div class="d-flex gap-3">
+                                        <a href="#" class="btn btn-outline-primary" aria-label="Facebook">
+                                            <span>📘</span> Facebook
+                                        </a>
+                                        <a href="#" class="btn btn-outline-info" aria-label="Twitter">
+                                            <span>🐦</span> Twitter
+                                        </a>
+                                        <a href="#" class="btn btn-outline-danger" aria-label="Instagram">
+                                            <span>📷</span> Instagram
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="map-container">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117724.05334793595!2d-102.36281!3d21.88234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee8f5f0b8d57%3A0x5a2f1b1b1b1b1b1b!2sAguascalientes%2C%20Ags.!5e0!3m2!1ses!2smx!4v1234567890"
+                                        width="100%"
+                                        height="250"
+                                        style="border:0; border-radius: 8px;"
+                                        allowfullscreen=""
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        title="Mapa de ubicación de HidroTec en Aguascalientes">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final Section -->
+        <section id="cta-final" class="py-5 bg-primary text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="display-5 fw-bold mb-3">¿Listo para Optimizar tu Computadora?</h2>
+                        <p class="lead mb-4">
+                            Aprovecha nuestra promoción de apertura: 20% de descuento + Primer mes a $199 MXN
+                        </p>
+                        <a href="#contacto" class="btn btn-light btn-lg cta-button" data-action="cta-final">
+                            Agenda tu Servicio Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">
+                        © 2025 <strong>HidroTec</strong>. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#hero" class="text-white text-decoration-none me-3">Inicio</a>
+                    <a href="#contacto" class="text-white text-decoration-none me-3">Contacto</a>
+                    <a href="#" class="text-white text-decoration-none">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- GridStack JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gridstack@9.5.1/dist/gridstack-all.js"></script>
+
+    <!-- anime.js -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+    <!-- mo.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+
+    <!-- html2canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
