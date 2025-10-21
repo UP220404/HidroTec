@@ -1077,6 +1077,153 @@ const NavigationModule = {
     }
 };
 
+// === PARTÍCULAS DEL HERO ===
+
+const HeroParticles = {
+    init: () => {
+        const canvas = document.createElement('canvas');
+        const container = document.getElementById('heroParticles');
+        if (!container) return;
+
+        container.appendChild(canvas);
+        const ctx = canvas.getContext('2d');
+
+        // Configurar canvas
+        const resizeCanvas = () => {
+            canvas.width = container.offsetWidth;
+            canvas.height = container.offsetHeight;
+        };
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Partículas
+        const particles = [];
+        const particleCount = 50;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+                this.opacity = Math.random() * 0.5 + 0.3;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+
+            draw() {
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // Crear partículas
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        // Animar
+        const animate = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            // Conectar partículas cercanas
+            particles.forEach((p1, i) => {
+                particles.slice(i + 1).forEach(p2 => {
+                    const dx = p1.x - p2.x;
+                    const dy = p1.y - p2.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 100) {
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 * (1 - distance / 100)})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                });
+            });
+
+            requestAnimationFrame(animate);
+        };
+
+        animate();
+    }
+};
+
+// === CONTADORES ANIMADOS ===
+
+const StatsCounters = {
+    init: () => {
+        const counters = document.querySelectorAll('.stat-number');
+        if (counters.length === 0) return;
+
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseFloat(counter.getAttribute('data-target'));
+                    StatsCounters.animateCounter(counter, target);
+                    observer.unobserve(counter);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => observer.observe(counter));
+    },
+
+    animateCounter: (element, target) => {
+        const duration = 2000; // 2 segundos
+        const start = 0;
+        const startTime = performance.now();
+        const isDecimal = target % 1 !== 0;
+
+        const updateCounter = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Easing function (ease-out)
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = start + (target - start) * easeOut;
+
+            if (isDecimal) {
+                element.textContent = current.toFixed(1);
+            } else {
+                element.textContent = Math.floor(current);
+            }
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = isDecimal ? target.toFixed(1) : target;
+            }
+        };
+
+        requestAnimationFrame(updateCounter);
+    }
+};
+
 // === INICIALIZACIÓN ===
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1091,6 +1238,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ContactoModule.init();
     AnuncioModule.init();
     NavigationModule.init();
+    HeroParticles.init();
+    StatsCounters.init();
 
     console.log('✅ HidroTec App lista!');
 });

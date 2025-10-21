@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Implementación inicial del sitio web HidroTec\n\n- Añadido sitio web completo con landing page profesional\n- Implementado módulo de encuesta de market research con 10 preguntas\n- Integradas gráficas interactivas con Chart.js (barras y dona)\n- Creado panel de métricas con GridStack.js (widgets arrastrables)\n- Añadido anuncio de apertura exportable como imagen\n- Implementado modo oscuro con persistencia en localStorage\n- Integradas animaciones con anime.js y mo.js\n- Stack: HTML5, CSS3, JavaScript vanilla, Bootstrap 5, Tailwind CSS\n- Características: responsive, accesible, SEO optimizado\n- Exportación de resultados de encuesta a CSV\n- Formulario de contacto con validación\n- PWA ready con manifest.json\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
